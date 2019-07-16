@@ -16,8 +16,8 @@ public class MedicTimeActivity extends AppCompatActivity {
 
         tabHost.addTab(tabHost.newTabSpec("tabTime").setIndicator("時鐘").setContent(R.id.tabTime));
         tabHost.addTab(tabHost.newTabSpec("tabAlarm").setIndicator("鬧鐘").setContent(R.id.tabAlarm));
-        tabHost.addTab(tabHost.newTabSpec("tabTimer").setIndicator("計時器").setContent(R.id.tabTimer));
-        tabHost.addTab(tabHost.newTabSpec("tabStopWatch").setIndicator("秒表").setContent(R.id.tabStopWatch));
+        tabHost.addTab(tabHost.newTabSpec("tabTimer").setIndicator("").setContent(R.id.tabTimer));
+        tabHost.addTab(tabHost.newTabSpec("tabStopWatch").setIndicator("").setContent(R.id.tabStopWatch));
     }
 
     private TabHost tabHost;

@@ -40,13 +40,28 @@
                         />
                 </com.example.mdcbox.mdcbox2.TimeView>
 
-                <LinearLayout
+                <com.example.mdcbox.mdcbox2.AlarmView
                     android:id="@+id/tabAlarm"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                </LinearLayout>
+                    <ListView
+                        android:id="@+id/lvAlarmList"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="0dp">
+
+                    </ListView>
+                    <Button
+                        android:id="@+id/btnAddAlarm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_alarm"/>
+
+
+
+                </com.example.mdcbox.mdcbox2.AlarmView>
 
                 <LinearLayout
                     android:id="@+id/tabTimer"
