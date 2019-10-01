@@ -7,43 +7,371 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/ll_1"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="#0066ff"
-        android:orientation="vertical"
-        android:padding="10dp">
-        <TextView
-            android:id="@+id/tv_1"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:background="#ffffff"
-            android:text="智慧藥盒"
-            android:gravity="center"
-            android:textSize="24sp" />
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#0066ff"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="10dp">-->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:background="#ffffff"-->
+            <!--android:text="智慧藥盒"-->
+            <!--android:gravity="center"-->
+            <!--android:textSize="24sp" />-->
 
-        <Button
-            android:id="@+id/btn_Button1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="藍芽" />
-        <Button
-            android:id="@+id/btn_Button2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="設定時間"/>
+        <!--<Button-->
+            <!--android:id="@+id/btn_Button1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="藍芽" />-->
+        <!--<Button-->
+            <!--android:id="@+id/btn_Button2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="設定時間"/>-->
 
+        <!--<Button-->
+            <!--android:id="@+id/btn_Button3"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:text="設定時間2" />-->
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_3"
+    <!--</LinearLayout>-->
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#0066ff"
-        android:orientation="horizontal">
+        android:background="@color/colorAqua">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="@drawable/medicines_hires"
+                android:textAlignment="center"
+                android:text="MEDIC BOX"
+                android:textSize="32sp"
+                android:gravity="bottom"
+                android:textColor="@color/colorPrimaryDark"
+                />
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                >
+                <LinearLayout
+                    android:id="@+id/btn_Button1"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_margin="2dp"
+                    android:orientation="vertical"
+                    android:background="@color/colorGrapeFruit"
+                    >
+
+                    <ImageView
+
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/noun_calendar_2754029"
+                        android:tint="@color/colorWhite"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorGrapeFruitDark"
+                        android:text="日曆"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_Button2"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_margin="2dp"
+                    android:orientation="vertical"
+                    android:background="@color/colorBitterSweet"
+                    >
+
+                    <ImageView
+
+                        android:layout_gravity="center"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/noun_alarm_clock_1137870"
+                        android:tint="@color/colorWhite" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorBitterSweetDark"
+                        android:text="鬧鐘"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_Button3"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_margin="2dp"
+                    android:orientation="vertical"
+                    android:background="@color/colorFlower"
+                    >
+                    <ImageView
+
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/noun_bleutooth_1789021"
+                        android:tint="@color/colorWhite"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorFlowerDark"
+                        android:text="藍芽"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Second Row-->
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="3"-->
+            <!--&gt;-->
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_margin="2dp"-->
+            <!--android:orientation="vertical"-->
+            <!--android:background="@color/colorGrass"-->
+            <!--&gt;-->
+            <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:src="@drawable/ic_icon_boxing"-->
+            <!--android:tint="@color/colorWhite"-->
+            <!--/>-->
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:padding="8dp"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:background="@color/colorGrassDark"-->
+            <!--android:text="Boxing"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--/>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_margin="2dp"-->
+            <!--android:orientation="vertical"-->
+            <!--android:background="@color/colorBlueJeans"-->
+            <!--&gt;-->
+            <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:src="@drawable/ic_icon_football"-->
+            <!--android:tint="@color/colorWhite"-->
+            <!--/>-->
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:padding="8dp"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:background="@color/colorBlueJeansDark"-->
+            <!--android:text="Football"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--/>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_margin="2dp"-->
+            <!--android:orientation="vertical"-->
+            <!--android:background="@color/colorLavander"-->
+            <!--&gt;-->
+            <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:src="@drawable/ic_icon_lontenis"-->
+            <!--android:tint="@color/colorWhite"-->
+            <!--/>-->
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:padding="8dp"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:background="@color/colorLavanderDark"-->
+            <!--android:text="Lon Tennis"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--/>-->
+
+            <!--</LinearLayout>-->
+
+
+            <!--</LinearLayout>-->
+            <!--&lt;!&ndash; End Second Row&ndash;&gt;-->
+            <!--&lt;!&ndash; Third Row&ndash;&gt;-->
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="3"-->
+            <!--&gt;-->
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_margin="2dp"-->
+            <!--android:orientation="vertical"-->
+            <!--android:background="@color/colorMint"-->
+            <!--&gt;-->
+            <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:src="@drawable/ic_icon_tenis"-->
+            <!--android:tint="@color/colorWhite"-->
+            <!--/>-->
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:padding="8dp"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:background="@color/colorMintDark"-->
+            <!--android:text="Tennis"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--/>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_margin="2dp"-->
+            <!--android:orientation="vertical"-->
+            <!--android:background="@color/colorAqua"-->
+            <!--&gt;-->
+            <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:src="@drawable/ic_icon_volleyball"-->
+            <!--android:tint="@color/colorWhite"-->
+            <!--/>-->
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:padding="8dp"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:background="@color/colorAquaDark"-->
+            <!--android:text="Volleyball"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--/>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_margin="2dp"-->
+            <!--android:orientation="vertical"-->
+            <!--android:background="@color/colorPinkRose"-->
+            <!--&gt;-->
+            <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:src="@drawable/ic_icon_weight_lefting"-->
+            <!--android:tint="@color/colorWhite"-->
+            <!--/>-->
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:padding="8dp"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:background="@color/colorPinkRoseDark"-->
+            <!--android:text="Weight Lifting"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--/>-->
+
+            <!--</LinearLayout>-->
+
+
+            <!--</LinearLayout>-->
+            <!-- End Third Row-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
 
 </LinearLayout>

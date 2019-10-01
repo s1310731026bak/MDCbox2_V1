@@ -15,28 +15,39 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon_medicine"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name">
+        <activity android:name=".loginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity android:name=".AlterAlarmActivity" />
+        <activity android:name=".alarm_list" />
+        <activity android:name=".SetAlarm2Activity" />
+        <activity android:name=".SetAlarmActivity" />
+        <activity android:name=".CalendarPickerViewActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+
+        </activity>
+
         <receiver
             android:name=".AlarmReceiver"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
         <activity android:name=".BluetoothActivity" />
-        <activity android:name=".MedicTimeActivity"></activity>
+        <activity android:name=".MedicTimeActivity" />
     </application>
 
 </manifest>

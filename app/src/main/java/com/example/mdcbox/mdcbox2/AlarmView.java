@@ -2,6 +2,7 @@ package com.example.mdcbox.mdcbox2;
 
 import android.app.AlarmManager;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Context;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TimePicker;
@@ -50,14 +52,16 @@ public class AlarmView extends LinearLayout {
         lvAlarmList.setAdapter(adapter);
         readSavedAlarmList();
 
-        adapter.add(new AlarmData(System.currentTimeMillis()));
+//        adapter.add(new AlarmData(System.currentTimeMillis()));
 
 
         btnAddAlarm.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 //add_Alarm Buttom 觸發按鈕
+
                 addAlarm();
+//                datePicker();
             }
         });
 
@@ -85,13 +89,51 @@ public class AlarmView extends LinearLayout {
 
     private void deleteAlarm(int position){
         adapter.remove(adapter.getItem(position));
+        saveAlarmList();
     }
 
-    private void addAlarm(){
+
+    String date_time = "";
+    int mYear;
+    int mMonth;
+    int mDay;
+
+    int mHour;
+    int mMinute;
+
+    private void datePicker(){
+
+
+
+        // Get Current Date
+        final Calendar c = Calendar.getInstance();
+        mYear = c.get(Calendar.YEAR);
+        mMonth = c.get(Calendar.MONTH);
+        mDay = c.get(Calendar.DAY_OF_MONTH);
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(),
+                new DatePickerDialog.OnDateSetListener() {
+
+                    @Override
+                    public void onDateSet(DatePicker view, int year,int monthOfYear, int dayOfMonth) {
+
+                        date_time = dayOfMonth + "-" + (monthOfYear + 1) + "-" + year;
+                        //*************Call Time Picker Here ********************
+                        Calendar calendar= Calendar.getInstance();
+                        calendar.set(Calendar.YEAR,year);
+                        calendar.set(Calendar.MONTH,monthOfYear);
+                        calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth);
+
+                        addAlarm();
+                    }
+                }, mYear, mMonth, mDay);
+        datePickerDialog.show();
+    }
+
+    public void addAlarm(){
         //TODO
 
         Calendar c=Calendar.getInstance();
-
 
         new TimePickerDialog(getContext(), new TimePickerDialog.OnTimeSetListener() {
             @Override
@@ -110,9 +152,12 @@ public class AlarmView extends LinearLayout {
                 adapter.add(new AlarmData(calendar.getTimeInMillis()));
                 alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 1000*60*5 , PendingIntent.getBroadcast(getContext(),0,new Intent(getContext(),AlarmReceiver.class),0));
 
+
+                saveAlarmList();
+
             }
         },c.get(Calendar.HOUR_OF_DAY),c.get(Calendar.MINUTE),true).show();
-        saveAlarmList();
+
 
     }
 
@@ -132,6 +177,9 @@ public class AlarmView extends LinearLayout {
 
         editor.putString(KEY_ALARM_LIST,content);
         System.out.println(content);
+
+        }else{
+            editor.putString(KEY_ALARM_LIST,null);
         }
 
         editor.commit();

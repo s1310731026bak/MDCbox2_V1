@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetAlarmActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAqua"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_settings"
+            android:textSize="40dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity=""
+                android:text="@string/mdc_name"
+                android:textSize="20dp"
+                android:paddingRight="20dp"/>
+
+            <EditText
+                android:id="@+id/tv_name"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:background="@color/colorWhite">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity=""
+                android:text="藥品數量"
+                android:textSize="20dp"
+                android:paddingRight="20dp"/>
+
+            <EditText
+                android:id="@+id/tv_count"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:inputType="number"
+                android:background="@color/colorWhite">
+            </EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity=""
+                android:text="使用單位"
+                android:textSize="20dp"
+                android:paddingRight="20dp"/>
+
+            <Spinner
+                android:id="@+id/spnner1"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:entries="@array/spn_list"
+                android:prompt="@string/select_region_dialog_title"
+                android:background="@color/colorWhite"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity=""
+                android:text="吃藥時間"
+                android:textSize="20dp"
+                android:paddingRight="20dp"/>
+
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:background="@color/colorWhite"
+                android:hint="格式 DD/MM"
+                >
+            </TextView>
+        </LinearLayout>
+
+
+
+        <Button
+
+            android:id="@+id/button_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@color/colorAccent"
+            android:text="新增"
+            android:textSize="20dp"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

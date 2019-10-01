@@ -18,7 +18,8 @@
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                />
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
@@ -31,6 +32,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+                    <include layout="@layout/activity_set_alarm"></include>
                     <TextView
                         android:id="@+id/tvTime"
                         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -38,6 +40,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         />
+
                 </com.example.mdcbox.mdcbox2.TimeView>
 
                 <com.example.mdcbox.mdcbox2.AlarmView
@@ -68,6 +71,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                 </LinearLayout>
 
