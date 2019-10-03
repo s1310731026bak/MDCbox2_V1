@@ -71,7 +71,6 @@ public class loginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
                 myDb = new Db(loginActivity.this);
 /////////////////IF判斷
                 SQLiteDatabase dbRead = myDb.getReadableDatabase();
@@ -104,7 +103,6 @@ public class loginActivity extends AppCompatActivity {
                     Toast.makeText(loginActivity.this,"已註冊帳號", Toast.LENGTH_SHORT).show();
                 }
                 dbRead.close();
-
                 //已註冊帳號
             }
         });
