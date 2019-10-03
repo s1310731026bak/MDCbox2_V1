@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-<string name="app_name">MDCbox2</string>
-<string name="action_settings">Settings</string>
-<string name="hello_world">Hello world!</string>
-<string name="on">Turn On</string>
-<string name="off">Turn Off</string>
-<string name="Visible">Get Visible</string>
-<string name="List">List Devices</string>
+    <string name="app_name">MDCbox</string>
+    <string name="action_settings">我的療程</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="on">Turn On</string>
+    <string name="off">Turn Off</string>
+    <string name="Visible">Get Visible</string>
+    <string name="List">List Devices</string>
+    <string name="add_alarm">add_alarm</string>
+    <string name="mdc_name">藥品名稱</string>
+    <string name="select_region_dialog_title">Spinner 對話視窗標題</string>
+    <string-array name="spn_list">
+        <item>片</item>
+        <item>克</item>
+        <item>毫升</item>
+        <item>滴</item>
+        <item>顆</item>
+    </string-array>
 
 </resources>
